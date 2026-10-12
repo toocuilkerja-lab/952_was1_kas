@@ -1,0 +1,5 @@
+{
+  "name": "952_was1_kas",
+  "description": "Aplikasii pengelolaan uang kas seksi untuk memantau debet, kredit, dan kontribusi pegawai dengan dukungan lampiran foto.",
+  "requestFramePermissions": ["camera"]
+}

@@ -1,11 +1,36 @@
-<div align="center">
+# 952_was1_kas - Aplikasi Uang Kas Seksi
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Aplikasi pengelolaan uang kas seksi dengan fitur debet, kredit, lampiran foto, dan rekapitulasi iuran pegawai.
 
-  <h1>Built with AI Studio</h2>
+## Panduan Deploy ke Vercel
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+Aplikasi ini telah dikonfigurasi agar kompatibel dengan Vercel. Namun, ada beberapa hal penting yang perlu diperhatikan:
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### 1. Database (PENTING)
+Aplikasi ini saat ini menggunakan **SQLite** (`kas.db`). Di lingkungan **Vercel (Serverless)**, file database ini bersifat **sementara (ephemeral)**. Artinya:
+- Data akan hilang setiap kali fungsi serverless dimulai ulang atau dideploy ulang.
+- Data tidak akan tersinkronisasi antar pengguna jika Vercel menjalankan beberapa instance.
 
-</div>
+**Saran untuk Produksi:**
+Untuk penggunaan nyata di Vercel, disarankan mengganti `better-sqlite3` dengan database cloud seperti:
+- **Supabase** (PostgreSQL)
+- **Neon** (PostgreSQL)
+- **MongoDB Atlas**
+
+### 2. Langkah Deploy
+1. Push kode ini ke repository **GitHub** Anda.
+2. Masuk ke [Vercel Dashboard](https://vercel.com).
+3. Klik **"Add New"** > **"Project"**.
+4. Impor repository dari GitHub.
+5. Vercel akan mendeteksi konfigurasi dari `vercel.json`.
+6. Klik **"Deploy"**.
+
+## Pengembangan Lokal
+1. Install dependensi: `npm install`
+2. Jalankan server dev: `npm run dev`
+3. Buka `http://localhost:3000`
+
+## Teknologi
+- **Frontend**: React, Tailwind CSS, Framer Motion, Lucide Icons.
+- **Backend**: Express.js, Better-SQLite3.
+- **Build Tool**: Vite.

@@ -1,0 +1,17 @@
+{
+  "name": "952_was1_kas",
+  "short_name": "Kas Seksi",
+  "description": "Aplikasi Pencatatan Uang Kas Seksi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F5F0",
+  "theme_color": "#141414",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2489/2489756.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
